@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Isaias Barber — Barbería &amp; Barbearia</title>
+  <meta
+    name="description"
+    content="Barbería de confianza. Cortes de cabello, barba y más — barbearia de confiança. Cortes de cabelo, barba e mais."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <!-- Inline SVG sprite: icons are defined once and reused via <use href="#id"> -->
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+      />
+    </symbol>
+    <symbol
+      id="i-scissors"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="6" cy="6" r="3" />
+      <path d="M8.12 8.12 12 12" />
+      <path d="M20 4 8.12 15.88" />
+      <circle cx="6" cy="18" r="3" />
+      <path d="M14.8 14.8 20 20" />
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        stroke="none"
+        d="M12 2.5l2.9 5.9 6.6 1-4.8 4.6 1.2 6.5-5.9-3.1-5.9 3.1 1.2-6.5L2.5 9.4l6.6-1z"
+      />
+    </symbol>
+    <symbol
+      id="i-check"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <polyline points="20 6 9 17 4 12" />
+    </symbol>
+    <symbol
+      id="i-smile"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+      <line x1="9" y1="9" x2="9.01" y2="9" />
+      <line x1="15" y1="9" x2="15.01" y2="9" />
+    </symbol>
+    <symbol
+      id="i-droplet"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
+    </symbol>
+    <symbol
+      id="i-eye"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol
+      id="i-clock"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </symbol>
+    <symbol
+      id="i-phone"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </symbol>
+    <symbol
+      id="i-pin"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="header__logo" href="#inicio">
+        <svg class="header__logo-icon" aria-hidden="true">
+          <use href="#i-scissors" />
+        </svg>
+        <span>Isaias <span class="header__logo-accent">Barber</span></span>
+      </a>
+
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Idioma / Language">
+          <button
+            class="lang__btn"
+            type="button"
+            data-lang-btn
+            data-lang="es"
+            aria-pressed="true"
+            aria-label="Español"
+          >
+            ES
+          </button>
+          <button
+            class="lang__btn"
+            type="button"
+            data-lang-btn
+            data-lang="pt"
+            aria-pressed="false"
+            aria-label="Português"
+          >
+            PT
+          </button>
+        </div>
+        <a
+          class="wa wa--mini"
+          data-wa
+          href="https://wa.me/5511999999999"
+          aria-label="WhatsApp"
+        >
+          <svg class="wa__icon" aria-hidden="true">
+            <use href="#i-whatsapp" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="header__nav" aria-label="Menú principal" data-i18n-aria="nav.label">
+      <ul class="header__nav-list wrap">
+        <li><a class="header__link" href="#inicio" aria-current="page" data-i18n="nav.inicio">Inicio</a></li>
+        <li><a class="header__link" href="#servicios" data-i18n="nav.servicios">Servicios</a></li>
+        <li><a class="header__link" href="#barberos" data-i18n="nav.barberos">Barberos</a></li>
+        <li><a class="header__link" href="#reserva" data-i18n="nav.reservar">Reservar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <!-- Replace assets/video/hero.mp4 with a real clip; the poster shows as fallback -->
+        <video
+          class="hero__video"
+          data-hero-video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/img/hero-poster.svg"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__tagline" data-i18n="hero.tagline">Barbería de confianza</p>
+        <h1 class="hero__title" id="hero-title" data-i18n="hero.title">
+          Estilo clásico, corte perfecto
+        </h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
+          Cortes de cabello, diseño de barba y afeitado clásico con toalla
+          caliente, en un ambiente profesional.
+        </p>
+
+        <div class="hero__rating">
+          <span class="hero__stars" aria-hidden="true">
+            <svg class="icon icon--sm"><use href="#i-star" /></svg>
+            <svg class="icon icon--sm"><use href="#i-star" /></svg>
+            <svg class="icon icon--sm"><use href="#i-star" /></svg>
+            <svg class="icon icon--sm"><use href="#i-star" /></svg>
+            <svg class="icon icon--sm"><use href="#i-star" /></svg>
+          </span>
+          <span data-i18n="rating.label">Valorado por clientes</span>
+        </div>
+
+        <div class="hero__actions">
+          <a class="wa wa--lg wa--pulse" data-wa href="https://wa.me/5511999999999">
+            <svg class="wa__icon" aria-hidden="true">
+              <use href="#i-whatsapp" />
+            </svg>
+            <span data-i18n="hero.cta">Reservar mi corte</span>
+          </a>
+        </div>
+
+        <ul class="hero__checks">
+          <li class="hero__check">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#i-check" /></svg>
+            <span data-i18n="hero.bullet1">Experiencia y estilo</span>
+          </li>
+          <li class="hero__check">
+            <svg class="icon icon--sm" aria-hidden="true"><use href="#i-check" /></svg>
+            <span data-i18n="hero.bullet2">Atención personalizada</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section services" id="servicios" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="section__kicker" data-i18n="services.kicker">Servicios</p>
+          <h2 class="section__title" id="services-title" data-i18n="services.title">
+            Nuestros servicios
+          </h2>
+          <p class="section__subtitle" data-i18n="services.subtitle">
+            Precios justos y resultados profesionales, siempre a tu medida.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true"><use href="#i-scissors" /></svg>
+            <h3 class="card__title" data-i18n="card.corte">Corte clásico</h3>
+            <p class="card__desc" data-i18n="card.corteDesc">
+              Corte a máquina y tijera, con lavado y peinado incluidos.
+            </p>
+            <div class="card__foot">
+              <span class="price">
+                <span class="price__label" data-i18n="price.from">Desde</span>
+                <span class="price__value">$12</span>
+              </span>
+              <a class="wa wa--mini" data-wa href="https://wa.me/5511999999999">
+                <svg class="wa__icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+                <span data-i18n="card.reserve">Reservar</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true"><use href="#i-star" /></svg>
+            <h3 class="card__title" data-i18n="card.corteBarba">Corte + barba</h3>
+            <p class="card__desc" data-i18n="card.corteBarbaDesc">
+              Corte completo, perfilado de barba y afeitado clásico.
+            </p>
+            <div class="card__foot">
+              <span class="price">
+                <span class="price__label" data-i18n="price.from">Desde</span>
+                <span class="price__value">$18</span>
+              </span>
+              <a class="wa wa--mini" data-wa href="https://wa.me/5511999999999">
+                <svg class="wa__icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+                <span data-i18n="card.reserve">Reservar</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true"><use href="#i-check" /></svg>
+            <h3 class="card__title" data-i18n="card.barba">Barba completa</h3>
+            <p class="card__desc" data-i18n="card.barbaDesc">
+              Perfilado, afeitado con toalla caliente y aceite de acabado.
+            </p>
+            <div class="card__foot">
+              <span class="price">
+                <span class="price__label" data-i18n="price.from">Desde</span>
+                <span class="price__value">$10</span>
+              </span>
+              <a class="wa wa--mini" data-wa href="https://wa.me/5511999999999">
+                <svg class="wa__icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+                <span data-i18n="card.reserve">Reservar</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true"><use href="#i-smile" /></svg>
+            <h3 class="card__title" data-i18n="card.nino">Corte infantil</h3>
+            <p class="card__desc" data-i18n="card.ninoDesc">
+              Cortes para los más pequeños en un ambiente amable y seguro.
+            </p>
+            <div class="card__foot">
+              <span class="price">
+                <span class="price__label" data-i18n="price.from">Desde</span>
+                <span class="price__value">$8</span>
+              </span>
+              <a class="wa wa--mini" data-wa href="https://wa.me/5511999999999">
+                <svg class="wa__icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+                <span data-i18n="card.reserve">Reservar</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true"><use href="#i-droplet" /></svg>
+            <h3 class="card__title" data-i18n="card.tinte">Coloración</h3>
+            <p class="card__desc" data-i18n="card.tinteDesc">
+              Tinte y decoloración con productos profesionales.
+            </p>
+            <div class="card__foot">
+              <span class="price">
+                <span class="price__label" data-i18n="price.from">Desde</span>
+                <span class="price__value">$15</span>
+              </span>
+              <a class="wa wa--mini" data-wa href="https://wa.me/5511999999999">
+                <svg class="wa__icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+                <span data-i18n="card.reserve">Reservar</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <svg class="card__icon" aria-hidden="true"><use href="#i-eye" /></svg>
+            <h3 class="card__title" data-i18n="card.cejas">Diseño de cejas</h3>
+            <p class="card__desc" data-i18n="card.cejasDesc">
+              Perfilado con cera, hilo o pinza, según lo prefieras.
+            </p>
+            <div class="card__foot">
+              <span class="price">
+                <span class="price__label" data-i18n="price.from">Desde</span>
+                <span class="price__value">$6</span>
+              </span>
+              <a class="wa wa--mini" data-wa href="https://wa.me/5511999999999">
+                <svg class="wa__icon" aria-hidden="true"><use href="#i-whatsapp" /></svg>
+                <span data-i18n="card.reserve">Reservar</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section barbers" id="barberos" aria-labelledby="barbers-title">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="section__kicker" data-i18n="barbers.kicker">Equipo</p>
+          <h2 class="section__title" id="barbers-title" data-i18n="barbers.title">
+            Nuestros barberos
+          </h2>
+          <p class="section__subtitle" data-i18n="barbers.subtitle">
+            Manos expertas y atención personalizada en cada corte.
+          </p>
+        </div>
+
+        <div class="barbers__grid">
+          <article class="barber">
+            <img
+              class="barber__photo"
+              src="assets/img/barber-1.svg"
+              alt="Isaias"
+              width="104"
+              height="104"
+            />
+            <h3 class="barber__name">Isaias</h3>
+            <p class="barber__role" data-i18n="barber.role1">
+              Barbero fundador · 15 años de oficio
+            </p>
+            <p class="barber__meta" aria-hidden="true">★★★★★</p>
+          </article>
+
+          <article class="barber">
+            <img
+              class="barber__photo"
+              src="assets/img/barber-2.svg"
+              alt="Mateus"
+              width="104"
+              height="104"
+            />
+            <h3 class="barber__name">Mateus</h3>
+            <p class="barber__role" data-i18n="barber.role2">
+              Barbero especialista en barba
+            </p>
+            <p class="barber__meta" aria-hidden="true">★★★★★</p>
+          </article>
+
+          <article class="barber">
+            <img
+              class="barber__photo"
+              src="assets/img/barber-3.svg"
+              alt="Diego"
+              width="104"
+              height="104"
+            />
+            <h3 class="barber__name">Diego</h3>
+            <p class="barber__role" data-i18n="barber.role3">
+              Barbero y diseñador de corte
+            </p>
+            <p class="barber__meta" aria-hidden="true">★★★★★</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reserve" id="reserva" aria-labelledby="reserve-title">
+      <div class="wrap reserve__inner">
+        <p class="section__kicker" data-i18n="reserve.kicker">Reserva</p>
+        <h2 class="reserve__title" id="reserve-title" data-i18n="reserve.title">
+          Reserva tu turno
+        </h2>
+        <p class="reserve__subtitle" data-i18n="reserve.subtitle">
+          Escríbenos por WhatsApp y te confirmamos el horario a la brevedad.
+        </p>
+        <div class="reserve__cta">
+          <a class="wa wa--lg" data-wa href="https://wa.me/5511999999999">
+            <svg class="wa__icon" aria-hidden="true">
+              <use href="#i-whatsapp" />
+            </svg>
+            <span data-i18n="reserve.cta">Escribir por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__brand-title">
+            Isaias <span class="footer__brand-accent">Barber</span>
+          </p>
+          <p class="footer__brand-text" data-i18n="footer.tagline">
+            Tu barbería de confianza en el barrio. Pasa, te esperamos.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer__heading" data-i18n="footer.hoursTitle">Horario</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>
+              <span data-i18n="hours.week">Lunes a viernes</span>
+              <span data-i18n="hours.weekValue">9:00 – 20:00</span>
+            </li>
+            <li class="footer__item">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>
+              <span data-i18n="hours.sat">Sábado</span>
+              <span data-i18n="hours.satValue">8:00 – 14:00</span>
+            </li>
+            <li class="footer__item">
+              <svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>
+              <span data-i18n="hours.sun">Domingo</span>
+              <span data-i18n="hours.sunValue">Cerrado</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading" data-i18n="footer.contactTitle">Contacto</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg>
+              <span data-i18n="footer.address">Av. Principal 123, Centro</span>
+            </li>
+            <li class="footer__item">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone" /></svg>
+              <span>+55 11 99999-9999</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span data-year></span> Isaias Barber</span>
+        <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-bar">
+    <a class="wa wa--mini wa--pulse" data-wa href="https://wa.me/5511999999999" aria-label="WhatsApp">
+      <svg class="wa__icon" aria-hidden="true">
+        <use href="#i-whatsapp" />
+      </svg>
+      <span data-i18n="sticky.label">Reservar ahora</span>
+    </a>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
