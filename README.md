@@ -6,7 +6,6 @@ plain HTML + CSS + vanilla ES modules served over HTTP.
 ## Structure
 
 ```
-barberia/
 ├── index.html            Semantic markup + inline SVG sprite (<symbol> + <use>)
 ├── css/
 │   ├── tokens.css        Design tokens (CSS custom properties) — single source of truth
@@ -21,21 +20,34 @@ barberia/
 ├── assets/
 │   ├── video/            Drop hero.mp4 here (hero uses assets/video/hero.mp4)
 │   └── img/              Poster + barber photo placeholders (SVG)
-└── README.md
+└── scripts/
+    └── verify.mjs        Static sanity checks (run: node scripts/verify.mjs)
 ```
 
-## Run it
+## Run it locally
 
 The page uses ES modules (`<script type="module">`), which browsers refuse to load
-from `file://` due to CORS. Serve the `barberia/` folder over HTTP:
+from `file://` due to CORS. Serve the repository root over HTTP:
 
 ```bash
-cd barberia
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
 
-Or with Node: `npx serve .` from inside `barberia/`.
+Or with Node: `npx serve .`
+
+## Deploy to GitHub Pages
+
+The repo root is the Pages source, so pushing is all that's needed:
+
+1. Push this branch: `git push origin main`.
+2. On GitHub: **Settings → Pages → Source: "Deploy from a branch" → branch `main` + `/ (root)`**.
+3. The site is live at `https://lqdm12.github.io/isaiasbarber/`.
+
+There's no `barberia/` subfolder anymore — `index.html` sits at the root, which
+is what Pages serves. If you ever see a Pages 404, first check that the file
+case matches (`index.html`, not `Index.html`) and that the branch/folder above
+is selected.
 
 ## How the pieces fit
 
